@@ -4,6 +4,12 @@
 #include "framework.h"
 #include "myEngine.h"
 
+#include "..\\ProtoEngine_SOURCE\\prApplication.h"
+
+// #pragma comment(lib, "..\\x64\\Debug\\ProtoEngine.lib")
+
+Application app;
+
 #define MAX_LOADSTRING 100
 
 // 전역 변수:
@@ -26,6 +32,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     UNREFERENCED_PARAMETER(lpCmdLine);
 
     // TODO: 여기에 코드를 입력합니다.
+
+	app.test();
 
     // 전역 문자열을 초기화합니다.
     LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
