@@ -1,5 +1,5 @@
 #include "prApplication.h"
-
+#include "prInput.h"
 
 namespace pr 
 {
@@ -21,6 +21,7 @@ namespace pr
 		mHdc = GetDC(mHwnd);
 
 		mPlayer.SetPosition(0, 0);
+		Input::Initialize();
 	}
 
 	void Application::Run() 
@@ -32,6 +33,8 @@ namespace pr
 
 	void Application::Update() 
 	{
+		Input::Update();
+
 		mPlayer.Update();
 	}
 
