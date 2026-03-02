@@ -17,6 +17,12 @@ namespace pr
 		void Render();
 
 	private:
+		void clearRenderTarget();
+		void adjustWindowRect(HWND hwnd, UINT width, UINT height);
+		void createBuffer(UINT width, UINT height);
+		void initializeEtc();
+
+	private:
 		HWND mHwnd;
 		HDC mHdc;
 
